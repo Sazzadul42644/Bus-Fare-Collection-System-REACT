@@ -11,7 +11,7 @@ function App() {
     <Router>
       <Head />
       <Routes>
-        <Route exact path='/' element={<Login />} />
+        <Route exact path='/login' element={<Login />} />
         <Route exact path='/bus-list' element={<ViewBusList />} />
         <Route exact path='/Card-Punch' element={<CardPunch />} />
       </Routes>

@@ -1,5 +1,5 @@
 import React from 'react';
-import Head from '../Shared/Header/Head';
+// import Head from '../Shared/Header/Head';
 
 const Login = () => {
     return (
