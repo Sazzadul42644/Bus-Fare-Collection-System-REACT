@@ -1,25 +1,47 @@
 import axios from 'axios';
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { useNavigate } from "react-router-dom";
 
 
 const Login = () => {
+    var user;
+    //var isLoggedIn;
+
     let [token, setToken] = useState("");
     let [email, setEmail] = useState("");
     let [password, setPassword] = useState("");
     let [errorMessage, setErrorMessage] = useState("");
+    //const [localStorage, setLocalStorage] = useState("");
+    let [isLoggedIn, setIsLoggedIn] = useState();
     const navigate = useNavigate();
+
+    const checkStorage = key => {
+        const storedData = localStorage.getItem(key);
+        if (!storedData) console.log('Local storage is empty');
+        else {
+            user = JSON.parse(localStorage.getItem(key));
+            setIsLoggedIn(user.access_token);
+        }
+    }
+
+    useEffect(() => {
+        checkStorage('user');
+    }, [])
 
     const loginSubmit = (e) => {
         e.preventDefault();
-        //var obj = { email, password };
-        //alert(obj.email);
+        checkStorage('user');
+
+        console.log(isLoggedIn);
         axios.post("http://127.0.0.1:8000/api/loginApi", {
             email,
-            password
+            password,
+            isLoggedIn
         }).then(response => {
+            console.log(response.data);
             if (response.data === 'logedin!') {
-                navigate('/Card-Punch');
+                navigate('/home');
+                //console.log('logedin! this device');
             }
             else if (response.data === 'this password is not matched') {
                 setErrorMessage("this password is not matched");
@@ -27,16 +49,17 @@ const Login = () => {
             else if (response.data === 'No user found') {
                 setErrorMessage("No user found");
             }
-            var token = response.data;
-            console.log(token);
-            var user = { userId: token.userid, access_token: token.token };
-            localStorage.setItem('user', JSON.stringify(user));
-            console.log(localStorage.getItem('user'));
+            else {
+                var token = response.data;
+                console.log(token);
+                var user = { userId: token.userid, access_token: token.token, userType: token.user_type };
+                localStorage.setItem('user', JSON.stringify(user));
+                console.log(localStorage.getItem('user'));
+            }
+
         }).catch(err => {
             console.log(err);
         });
-
-
     }
 
     return (

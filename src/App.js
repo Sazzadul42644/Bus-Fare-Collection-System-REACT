@@ -7,13 +7,15 @@ import CardPunch from './Pages/DummyRequest/CardPunch';
 import ViewBusList from './Pages/ViewBusList/ViewBusList';
 import ViewStation from './Pages/ViewStation/ViewStation';
 import Logout from './Pages/LogOut/LogOut';
+import Home from './Pages/Home/Home';
 
 function App() {
   return (
     <Router>
       <Head />
       <Routes>
-        <Route exact path='/' element={<Login />} />
+        <Route exact path='/' element={<Home />} />
+        <Route exact path='/home' element={<Home />} />
         <Route exact path='/login' element={<Login />} />
         <Route exact path='/logout' element={<Logout />} />
         <Route exact path='/bus-list' element={<ViewBusList />} />

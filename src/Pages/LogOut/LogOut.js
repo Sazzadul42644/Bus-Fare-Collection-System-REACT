@@ -5,14 +5,16 @@ import { useNavigate } from "react-router-dom";
 const Logout = () => {
 
     const navigate = useNavigate();
-    let user = JSON.parse(localStorage.getItem('user'));
+    const user = JSON.parse(localStorage.getItem('user'));
 
     var obj = { token: user.access_token };
+
+    console.log(user);
 
     axios.post("http://127.0.0.1:8000/api/logout", obj)
         .then(resp => {
             var token = resp.data;
-            console.log(token);
+            localStorage.removeItem('user');
             navigate('/login');
         }).catch(err => {
             console.log(err);
