@@ -6,6 +6,7 @@ import { BrowserRouter as Router, Route, Routes } from 'react-router-dom'
 import CardPunch from './Pages/DummyRequest/CardPunch';
 import ViewBusList from './Pages/ViewBusList/ViewBusList';
 import ViewStation from './Pages/ViewStation/ViewStation';
+import Logout from './Pages/LogOut/LogOut';
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
       <Routes>
         <Route exact path='/' element={<Login />} />
         <Route exact path='/login' element={<Login />} />
+        <Route exact path='/logout' element={<Logout />} />
         <Route exact path='/bus-list' element={<ViewBusList />} />
         <Route exact path='/Card-Punch' element={<CardPunch />} />
         <Route exact path='/stations' element={<ViewStation />} />
