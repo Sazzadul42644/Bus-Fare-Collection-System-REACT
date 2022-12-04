@@ -1,6 +1,7 @@
 import axios from 'axios';
 import React, { useEffect, useState } from 'react';
 import { useNavigate } from "react-router-dom";
+import NotLoggedIn from '../Shared/Header/NotLoggedIn';
 
 
 const Login = () => {
@@ -12,25 +13,39 @@ const Login = () => {
     let [password, setPassword] = useState("");
     let [errorMessage, setErrorMessage] = useState("");
     //const [localStorage, setLocalStorage] = useState("");
-    let [isLoggedIn, setIsLoggedIn] = useState();
+    //let [isLoggedIn, setIsLoggedIn] = useState();
     const navigate = useNavigate();
 
-    const checkStorage = key => {
-        const storedData = localStorage.getItem(key);
-        if (!storedData) console.log('Local storage is empty');
-        else {
-            user = JSON.parse(localStorage.getItem(key));
-            setIsLoggedIn(user.access_token);
-        }
-    }
+    const [isLoggedIn, setIsLoggedIn] = useState();
 
     useEffect(() => {
-        checkStorage('user');
+        const user = JSON.parse(localStorage.getItem('user'));
+        if (user) {
+            setIsLoggedIn(user.access_token);
+        }
+        else {
+            setIsLoggedIn(false);
+        }
+
     }, [])
+
+
+    // const checkStorage = key => {
+    //     const storedData = localStorage.getItem(key);
+    //     if (!storedData) console.log('Local storage is empty');
+    //     else {
+    //         user = JSON.parse(localStorage.getItem(key));
+    //         setIsLoggedIn(user.access_token);
+    //     }
+    // }
+
+    // useEffect(() => {
+    //     checkStorage('user');
+    // }, [])
 
     const loginSubmit = (e) => {
         e.preventDefault();
-        checkStorage('user');
+        //checkStorage('user');
 
         console.log(isLoggedIn);
         axios.post("http://127.0.0.1:8000/api/loginApi", {
@@ -55,6 +70,18 @@ const Login = () => {
                 var user = { userId: token.userid, access_token: token.token, userType: token.user_type };
                 localStorage.setItem('user', JSON.stringify(user));
                 console.log(localStorage.getItem('user'));
+                if (token.user_type === 'passenger') {
+                    navigate('/passenger-home');
+                }
+                else if (token.user_type === 'busOwner') {
+                    navigate('/busowner-home');
+                }
+                else if (token.user_type === 'admin') {
+                    navigate('/admin-home');
+                }
+                else {
+                    console.log('vugucugi');
+                }
             }
 
         }).catch(err => {
@@ -63,8 +90,8 @@ const Login = () => {
     }
 
     return (
-
         <div>
+            <NotLoggedIn></NotLoggedIn>
             <div className="container">
                 <div className="mt-5">
                     <h2 >Welcome</h2>
