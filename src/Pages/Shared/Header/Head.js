@@ -9,6 +9,7 @@ const Head = () => {
             <Link className="btn btn-outline-primary" to="/register-owner">Owner Registration</Link>
             <Link className="btn btn-outline-primary" to="/bus-list">bus list</Link>
             <Link className="btn btn-outline-primary" to="/Card-Punch">CardPunch</Link>
+            <Link className="btn btn-outline-primary" to="/stations">stations</Link>
         </div>
     );
 };
