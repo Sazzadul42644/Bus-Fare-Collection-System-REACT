@@ -5,17 +5,11 @@ import NotLoggedIn from '../Shared/Header/NotLoggedIn';
 
 
 const Login = () => {
-    var user;
-    //var isLoggedIn;
-
-    // let [token, setToken] = useState("");
+    //let [token, setToken] = useState("");
     let [email, setEmail] = useState("");
     let [password, setPassword] = useState("");
     let [errorMessage, setErrorMessage] = useState("");
-    //const [localStorage, setLocalStorage] = useState("");
-    //let [isLoggedIn, setIsLoggedIn] = useState();
     const navigate = useNavigate();
-
     const [isLoggedIn, setIsLoggedIn] = useState();
 
     useEffect(() => {
@@ -29,23 +23,8 @@ const Login = () => {
 
     }, [])
 
-
-    // const checkStorage = key => {
-    //     const storedData = localStorage.getItem(key);
-    //     if (!storedData) console.log('Local storage is empty');
-    //     else {
-    //         user = JSON.parse(localStorage.getItem(key));
-    //         setIsLoggedIn(user.access_token);
-    //     }
-    // }
-
-    // useEffect(() => {
-    //     checkStorage('user');
-    // }, [])
-
     const loginSubmit = (e) => {
         e.preventDefault();
-        //checkStorage('user');
 
         console.log(isLoggedIn);
         axios.post("http://127.0.0.1:8000/api/loginApi", {
