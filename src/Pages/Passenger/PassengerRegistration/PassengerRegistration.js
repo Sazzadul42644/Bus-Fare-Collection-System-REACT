@@ -48,7 +48,7 @@ const PassengerRegistration = () => {
         <div>
             <NotLoggedIn></NotLoggedIn>
             <div>
-                <div className="mt-5">
+                <div className="mx-5">
                     <h2>Welcome</h2>
                 </div>
                 <div className="container my-5">

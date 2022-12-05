@@ -16,8 +16,8 @@ const ViewStation = () => {
     }
 
     return (
-        <div>
-            <button onClick={getData} className="btn btn-primary mt-5 col-md-4">get station name</button>
+        <div className="container">
+            <button onClick={getData} className="btn btn-primary mt-3 col-md-2">get station name</button>
             <div class="mt-5">
                 <table class="table table-hover">
                     <thead>
