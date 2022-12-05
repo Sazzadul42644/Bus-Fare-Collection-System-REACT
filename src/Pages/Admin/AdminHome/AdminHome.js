@@ -1,9 +1,11 @@
 import React from 'react';
-
+import AdminNav from '../AdminNav/AdminNav'
+import AddStation from '../AddStation/AddStation'
 const AdminHome = () => {
     return (
         <div>
-            <h2>this is admin home</h2>
+            <AdminNav></AdminNav>
+            {/* <AddStation></AddStation> */}
         </div>
     );
 };

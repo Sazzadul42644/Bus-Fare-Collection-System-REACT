@@ -11,6 +11,9 @@ import Home from './Pages/Home/Home';
 import PassengerRegistration from './Pages/Passenger/PassengerRegistration/PassengerRegistration';
 import PassengerHome from './Pages/Passenger/PassengerHome/PassengerHome';
 import AdminHome from './Pages/Admin/AdminHome/AdminHome';
+import AddStation from './Pages/Admin/AddStation/AddStation';
+import AddRoute from './Pages/Admin/AddRoute/AddRoute';
+import BusOwnerHome from './Pages/BusOwner/BusOwnerHome/BusOwnerHome';
 
 function App() {
   return (
@@ -25,10 +28,15 @@ function App() {
 
         <Route exact path='/passenger-home' element={<PassengerHome />} />
         <Route exact path='/admin-home' element={<AdminHome />} />
+        <Route exact path='/bus-owner-home' element={<BusOwnerHome />} />
 
         <Route exact path='/bus-list' element={<ViewBusList />} />
         <Route exact path='/Card-Punch' element={<CardPunch />} />
         <Route exact path='/stations' element={<ViewStation />} />
+
+        <Route exact path='/add-stations' element={<AddStation />} />
+        <Route exact path='/add-route' element={<AddRoute />} />
+
       </Routes>
     </Router>
 

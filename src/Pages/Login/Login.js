@@ -53,7 +53,7 @@ const Login = () => {
                     navigate('/passenger-home');
                 }
                 else if (token.user_type === 'busOwner') {
-                    navigate('/busowner-home');
+                    navigate('/bus-owner-home');
                 }
                 else if (token.user_type === 'admin') {
                     navigate('/admin-home');
