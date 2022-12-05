@@ -18,6 +18,7 @@ const AddStation = () => {
                     </div>
                 </div>
                 <div>
+                    <button type="submit" className="btn btn-primary mt-3 mx-5">Add Another</button>
                     <button type="submit" className="btn btn-primary mt-3">Confirm</button>
                 </div>
             </div>
