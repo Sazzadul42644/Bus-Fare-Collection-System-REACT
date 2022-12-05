@@ -20,17 +20,13 @@ const PassengerRegistration = () => {
                             <div className="col-md-6">
                                 <label for="last_name" className="form-label">Last name</label>
                                 <input type="text" className="form-control" id="validationCustom02" placeholder="Last name" name="last_name" />
-                                <div className="col-md-6">
-                                    <label for="validationDefaultEmail" className="form-label">Email</label>
-                                    <div className="input-group">
-                                        <input type="email" className="form-control" id="validationDefaultEmail"
-                                            aria-describedby="inputGroupPrepend2" name="email" placeholder="exemple@mail.com" />
-                                    </div>
+                                <label for="validationDefaultEmail" className="form-label">Email</label>
+                                <div className="input-group">
+                                    <input type="email" className="form-control" id="validationDefaultEmail"
+                                        aria-describedby="inputGroupPrepend2" name="email" placeholder="exemple@mail.com" />
                                 </div>
-                                <div className="col-md-6">
-                                    <label for="inputPhone" className="form-label">Phone Number</label>
-                                    <input type="number" className="form-control" id="inputPassword4" name="phone" placeholder="01XXXX-XXXXX" />
-                                </div>
+                                <label for="inputPhone" className="form-label">Phone Number</label>
+                                <input type="number" className="form-control" id="inputPassword4" name="phone" placeholder="01XXXX-XXXXX" />
                                 <div className="col-12">
                                     <label for="inputAddress" className="form-label">Address</label>
                                     <input type="text" className="form-control" id="inputAddress" placeholder="Kuratoli, Khilkhet, Bangladesh"
