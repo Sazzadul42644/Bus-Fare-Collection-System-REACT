@@ -10,6 +10,7 @@ import Logout from './Pages/LogOut/LogOut';
 import Home from './Pages/Home/Home';
 import PassengerRegistration from './Pages/Passenger/PassengerRegistration/PassengerRegistration';
 import PassengerHome from './Pages/Passenger/PassengerHome/PassengerHome';
+import AdminHome from './Pages/Admin/AdminHome/AdminHome';
 
 function App() {
   return (
@@ -23,6 +24,7 @@ function App() {
         <Route exact path='/register-passenger' element={<PassengerRegistration />} />
 
         <Route exact path='/passenger-home' element={<PassengerHome />} />
+        <Route exact path='/admin-home' element={<AdminHome />} />
 
         <Route exact path='/bus-list' element={<ViewBusList />} />
         <Route exact path='/Card-Punch' element={<CardPunch />} />
