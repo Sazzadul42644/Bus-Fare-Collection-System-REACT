@@ -7,7 +7,7 @@ const BusOwnerNav = () => {
             <div className="container mt-5">
                 <nav className="navbar navbar-expand-lg bg-light">
                     <div className="container-fluid">
-                        <a className="navbar-brand" href="">FCS</a>
+                        <a className="navbar-brand" href="">BFCS</a>
                         <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
                             aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                             <span className="navbar-toggler-icon"></span>
@@ -24,7 +24,7 @@ const BusOwnerNav = () => {
                                     <Link className="nav-link" aria-current="page" to="/route-list">Route List</Link>
                                 </li>
                                 <li className="nav-item">
-                                    <Link className="nav-link" aria-current="page" to="/bus-list">Bus List</Link>
+                                    <Link className="nav-link" aria-current="page" to="/list-bus">Bus List</Link>
                                 </li>
                             </ul>
                         </div>
