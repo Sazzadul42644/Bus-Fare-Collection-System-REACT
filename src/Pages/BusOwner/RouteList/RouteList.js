@@ -1,7 +1,7 @@
 import React from 'react';
 import BusOwnerNav from '../BusOwnerNav/BusOwnerNav';
 
-const BusOwnerHome = () => {
+const RouteList = () => {
     return (
         <div>
             <BusOwnerNav></BusOwnerNav>
@@ -9,4 +9,4 @@ const BusOwnerHome = () => {
     );
 };
 
-export default BusOwnerHome;
+export default RouteList;
