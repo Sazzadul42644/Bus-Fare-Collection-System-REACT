@@ -64,7 +64,7 @@ const AddBus = () => {
                     </div>
 
                     <div className="col-12">
-                        <button onClick={addBusSubmit} className="btn btn-primary">Add bud</button>
+                        <button onClick={addBusSubmit} className="btn btn-primary">Add bus</button>
                     </div>
                 </form>
             </div>
