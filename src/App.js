@@ -17,6 +17,7 @@ import BusOwnerHome from './Pages/BusOwner/BusOwnerHome/BusOwnerHome';
 import RouteList from './Pages/BusOwner/RouteList/RouteList';
 import BusList from './Pages/BusOwner/BusList/BusList';
 import AddBus from './Pages/BusOwner/AddBus/AddBus';
+import UpdateBus from './Pages/BusOwner/UpdateBus/UpdateBus';
 
 function App() {
   return (
@@ -43,6 +44,8 @@ function App() {
         <Route exact path='/route-list' element={<RouteList />} />
         <Route exact path='/list-Bus' element={<BusList />} />
         <Route exact path='/add-bus' element={<AddBus />} />
+
+        <Route exact path='/update-bus' element={<UpdateBus />} />
 
       </Routes>
     </Router>
