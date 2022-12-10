@@ -1,6 +1,6 @@
 import axios from 'axios';
 import React, { useEffect, useState } from 'react';
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import NotLoggedIn from '../Shared/Header/NotLoggedIn';
 
 
@@ -103,6 +103,7 @@ const Login = () => {
                         </div>
                         <div className="mx-5 my-2">
                             <button onClick={loginSubmit} className="btn btn-primary">Log In</button>
+                            <Link className='mx-5' to="/password/forget">Forget Password</Link>
                         </div>
                     </form>
                 </div>

@@ -37,7 +37,7 @@ const BusList = () => {
                                 <td>{bus.trade_licence}</td>
                                 <td>{bus.route_no}</td>
                                 <td><Link to> delete</Link></td>
-                                <td><Link to="/update-bus"> update</Link></td>
+                                <td><Link to={`/update-bus/${bus.id}`}> update</Link></td>
                             </tr>
                         ))}
                     </tbody>
