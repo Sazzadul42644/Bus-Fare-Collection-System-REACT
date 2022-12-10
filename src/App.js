@@ -20,6 +20,7 @@ import AddBus from './Pages/BusOwner/AddBus/AddBus';
 import UpdateBus from './Pages/BusOwner/UpdateBus/UpdateBus';
 import ForgetForm from './Pages/ForgetForm/ForgetForm';
 import RouteOrderDistance from './Pages/RouteOrderDistance/RouteOrderDistance';
+import PassengerList from './Pages/Admin/PassengerList/PassengerList';
 
 function App() {
   return (
@@ -53,6 +54,7 @@ function App() {
         <Route exact path='/route-order' element={<RouteOrderDistance />} />
 
 
+        <Route exact path='/passenger-list' element={<PassengerList />} />
 
       </Routes>
     </Router>
