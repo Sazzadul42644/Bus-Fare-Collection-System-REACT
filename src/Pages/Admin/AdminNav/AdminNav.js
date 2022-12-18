@@ -23,6 +23,15 @@ const AdminHome = () => {
                                 <li className="nav-item">
                                     <Link className="nav-link" aria-current="page" to="/add-route">Add Route</Link>
                                 </li>
+                                <li className="nav-item">
+                                    <Link className="nav-link" aria-current="page" to="/stations">View Station</Link>
+                                </li>
+                                <li className="nav-item">
+                                    <Link className="nav-link" aria-current="page" to="/view-route">View Route</Link>
+                                </li>
+                                <li class="nav-item">
+                                    <Link class="nav-link" to="/logout">Log out</Link>
+                                </li>
                             </ul>
                         </div>
                     </div>

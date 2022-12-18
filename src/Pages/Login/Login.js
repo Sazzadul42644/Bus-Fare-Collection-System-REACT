@@ -74,7 +74,7 @@ const Login = () => {
             <NotLoggedIn></NotLoggedIn>
             <div className="container">
                 <div className="mt-5">
-                    <h2 >Welcome</h2>
+                    <h2 className='text-center' >Welcome</h2>
                 </div>
                 <div className="mx-5 my-5">
                     <form className="mx-5 col-lg-5">

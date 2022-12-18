@@ -1,6 +1,6 @@
 import axios, { Axios } from 'axios';
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import BusOwnerNav from '../BusOwnerNav/BusOwnerNav';
 
 
@@ -9,6 +9,7 @@ const AddBus = () => {
     let [Amount_of_Bus, setAmountofBus] = useState("");
     let [Trade_Licence, setTradeLicence] = useState("");
     let [Route_no, setFirstName] = useState("");
+    const navigate = useNavigate();
 
     const addBusSubmit = (e) => {
         e.preventDefault();
@@ -19,7 +20,7 @@ const AddBus = () => {
             Trade_Licence,
             Route_no,
         }).then(response => {
-            console.log(response.data);
+            navigate('/list-Bus');
         }).catch(error => console.log(error))
 
     }

@@ -21,6 +21,11 @@ import UpdateBus from './Pages/BusOwner/UpdateBus/UpdateBus';
 import ForgetForm from './Pages/ForgetForm/ForgetForm';
 import RouteOrderDistance from './Pages/RouteOrderDistance/RouteOrderDistance';
 import PassengerList from './Pages/Admin/PassengerList/PassengerList';
+import ResetPassword from './Pages/ResetPassword/ResetPassword';
+import OwnerRegistration from './Pages/BusOwner/OwnerRegistration/OwnerRegistration';
+import ViewRoute from './Pages/Admin/ViewRoute/ViewRoute';
+import TravelHistory from './Pages/Passenger/TravelHistory/TravelHistory';
+
 
 function App() {
   return (
@@ -32,6 +37,7 @@ function App() {
         <Route exact path='/login' element={<Login />} />
         <Route exact path='/logout' element={<Logout />} />
         <Route exact path='/register-passenger' element={<PassengerRegistration />} />
+        <Route exact path='/owner-register' element={<OwnerRegistration />} />
 
         <Route exact path='/passenger-home' element={<PassengerHome />} />
         <Route exact path='/admin-home' element={<AdminHome />} />
@@ -55,6 +61,13 @@ function App() {
 
 
         <Route exact path='/passenger-list' element={<PassengerList />} />
+        <Route exact path='/Reset-Password' element={<ResetPassword />} />
+        <Route exact path='/view-route' element={<ViewRoute />} />
+        <Route exact path='/passenger-travel-history' element={<TravelHistory />} />
+
+
+
+
 
       </Routes>
     </Router>

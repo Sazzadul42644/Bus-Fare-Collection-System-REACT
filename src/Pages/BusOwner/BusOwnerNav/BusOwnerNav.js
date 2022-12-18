@@ -26,6 +26,9 @@ const BusOwnerNav = () => {
                                 <li className="nav-item">
                                     <Link className="nav-link" aria-current="page" to="/list-bus">Bus List</Link>
                                 </li>
+                                <li class="nav-item">
+                                    <Link class="nav-link" to="/login">Log out</Link>
+                                </li>
                             </ul>
                         </div>
                     </div>

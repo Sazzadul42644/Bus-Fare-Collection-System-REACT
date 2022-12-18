@@ -1,5 +1,6 @@
 import axios from 'axios';
 import React, { useEffect, useState } from 'react';
+import AdminNav from '../Admin/AdminNav/AdminNav';
 
 const ViewStation = () => {
     const [stations, setStations] = useState([]);
@@ -17,6 +18,7 @@ const ViewStation = () => {
 
     return (
         <div className="container">
+            <AdminNav></AdminNav>
             <button onClick={getData} className="btn btn-primary mt-3 col-md-2">get station name</button>
             <div class="mt-5">
                 <table class="table table-hover">

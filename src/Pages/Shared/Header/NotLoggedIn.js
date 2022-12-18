@@ -22,7 +22,7 @@ const NotLoggedIn = () => {
                 }
                 {/* <Link className="btn btn-outline-primary" to="/login">Log in</Link> */}
                 <Link className="btn btn-outline-primary" to="/register-passenger">Passenger Registration</Link>
-                <Link className="btn btn-outline-primary" to="/register-owner">Bus Owner Registration</Link>
+                <Link className="btn btn-outline-primary" to="/owner-register">Bus Owner Registration</Link>
             </div>
         </div>
     );

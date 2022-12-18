@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import PassengerNav from '../PassengerNav/PassengerNav';
 
 const PassengerHome = () => {
 
@@ -7,36 +8,10 @@ const PassengerHome = () => {
 
     return (
         <div>
-            <h2>this is PassengerHome</h2>
             <div class="container">
-                <nav class="navbar navbar-expand-lg bg-light mt-5">
-                    <div class="container-fluid">
-                        <Link class="navbar-brand" to="/passenger-home">BFCS</Link>
-                        <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                            data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
-                            aria-expanded="false" aria-label="Toggle navigation">
-                            <span class="navbar-toggler-icon"></span>
-                        </button>
-                        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                            <ul class="navbar-nav me-auto mb-2 mb-lg-0 ">
-                                <li class="nav-item ">
-                                    <Link class="nav-link active" aria-current="page" to="/passenger-home">Home</Link>
-                                </li>
-                                <li class="nav-item">
-                                    <Link class="nav-link" to="/passenger-travel-history">Travel History</Link>
-                                </li>
-                                <li class="nav-item ">
-                                    <Link class="nav-link " to="/passenger-profile">Profile</Link>
-                                </li>
-                                <li class="nav-item">
-                                    <Link class="nav-link" to="/logout">Log out</Link>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                </nav>
+                <PassengerNav></PassengerNav>
                 <div>
-                    <h2>Balance:</h2>
+                    <h2>Balance:500</h2>
                 </div>
                 <div class="mt-5 d-flex">
                     <div class="col-md-3">
@@ -63,24 +38,24 @@ const PassengerHome = () => {
                         <tbody>
                             <tr>
                                 <th scope="row">1</th>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                                <td></td>
+                                <td>Kuratali</td>
+                                <td>Banasri</td>
+                                <td>59km</td>
+                                <td>30</td>
                             </tr>
                             <tr>
                                 <th scope="row">2</th>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                                <td></td>
+                                <td>Banasri</td>
+                                <td>Kuratali</td>
+                                <td>59km</td>
+                                <td>30</td>
                             </tr>
                             <tr>
                                 <th scope="row">3</th>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                                <td></td>
+                                <td>Kuratali</td>
+                                <td>Mirpur 10</td>
+                                <td>59.3km</td>
+                                <td>40</td>
                             </tr>
                         </tbody>
                     </table>
